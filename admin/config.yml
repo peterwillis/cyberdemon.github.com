@@ -10,20 +10,26 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
       - {label: "Title", name: "title", widget: "string"}
-      - label: 'Rows'
-        name: 'Rows'
-        label_singular: "row"
+      - label: 'Containers'
+        label_singular: 'Container'
+        name: 'Containers'
         widget: 'list'
         fields:
-          - label: 'Columns'
-            name: 'Columns'
-            label_singular: "column"
+          - label: 'Rows'
+            name: 'Rows'
+            label_singular: "row"
             widget: 'list'
             fields:
-              - {label: "Body", name: "body", widget: "markdown"}
-            
+              - {label: "Css Classes", name: "class", widget: "text", default: "row"}
+              - label: 'Columns'
+                name: 'Columns'
+                label_singular: "column"
+                widget: 'list'
+                fields:
+                  - {label: "Css Classes", name: "class", widget: "text", default: "col"}
+                  - {label: "Body", name: "body", widget: "markdown"}
     meta:
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - {label: 'SEO Description', name: 'description', widget: 'text'}
     preview_path: "pages/{{slug}}"
   - name: "blog"
     label: "Posts"
