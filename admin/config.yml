@@ -3,7 +3,7 @@ backend:
 media_folder: "images/uploads"
 collections:
   - name: "pages"
-    label: "Pages"
+    label: "Page"
     folder: "_pages"
     create: true
     fields:
