@@ -16,6 +16,8 @@ collections:
         widget: 'list'
         fields:
           - { label: 'String', name: 'string', widget: 'string' }
+    meta:
+      - { label: 'SEO Description', name: 'description', widget: 'text' }
   - name: "blog"
     label: "Posts"
     label_singular: "Post"
