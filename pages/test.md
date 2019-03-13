@@ -2,4 +2,4 @@
 layout: home
 title: Test
 ---
-Body
+Body 2
