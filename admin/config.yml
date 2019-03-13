@@ -10,12 +10,18 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "home"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: 'List'
-        name: 'list'
+      - label: 'Rows'
+        name: 'Rows'
+        label_singular: "row"
         widget: 'list'
         fields:
-          - { label: 'String', name: 'string', widget: 'string' }
+          - label: 'Columns'
+            name: 'Columns'
+            label_singular: "column"
+            widget: 'list'
+            fields:
+              - {label: "Body", name: "body", widget: "markdown"}
+            
     meta:
       - { label: 'SEO Description', name: 'description', widget: 'text' }
     preview_path: "pages/{{slug}}"
